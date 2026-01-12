@@ -1,5 +1,5 @@
 let carres_colores = [];
-const couleurs = ["red", "green", "blue", "purple", "yellow", "pink"];
+const couleurs = ["red", "green", "blue", "purple", "yellow", "pink", "white"];
 let idx_couleur_actuelle = 0;
 
 function setup() {
@@ -13,10 +13,6 @@ function draw() {
   //figure_3();
 
   grille_dessin();
-}
-
-function mousePressed() {
-  idx_couleur_actuelle = (idx_couleur_actuelle + 1) % couleurs.length;
 }
 
 function lignes_epaisses() {
@@ -66,9 +62,11 @@ function figure_3() {
 }
 
 function grille_dessin() {
+  // On définit les caractéristiques de la grille de carrés
   const nb_carres_hauteur = 20;
   const longueur_cote_carre = 400 / nb_carres_hauteur;
 
+  // On explore chaque emplacement auquel il y aura un carré
   for (
     let x = 0;
     x + (longueur_cote_carre - 1) < window.innerWidth;
@@ -79,6 +77,7 @@ function grille_dessin() {
       y + (longueur_cote_carre - 1) < window.innerHeight;
       y += longueur_cote_carre
     ) {
+      // Quand la souris passe sur un emplacement de carré, on l'ajoute à la liste des carrés qui doivent être colorés
       if (
         mouseX >= x &&
         mouseX <= x + longueur_cote_carre &&
@@ -92,14 +91,16 @@ function grille_dessin() {
             break;
           }
         }
+        // S'il est déjà coloré, on lui met la couleur actuelle du pointeur (au cas où elle a changé depuis le dernier passage sur cette case)
         if (carre_deja_colore) {
           carre_deja_colore[2] = idx_couleur_actuelle;
         } else {
           carres_colores.push([x, y, idx_couleur_actuelle]);
         }
       }
-      noFill();
+      noFill(); // Le carré reste transparent s'il n'est pas dans la liste des carrés colorés
       for (let carre_colore of carres_colores) {
+        // Sinon on lui applique sa couleur
         if (carre_colore[0] == x && carre_colore[1] == y) {
           fill(couleurs[carre_colore[2]]);
           break;
@@ -108,4 +109,9 @@ function grille_dessin() {
       rect(x, y, longueur_cote_carre, longueur_cote_carre);
     }
   }
+}
+
+function mousePressed() {
+  // On fait tourner les couleurs du curseur au clic
+  idx_couleur_actuelle = (idx_couleur_actuelle + 1) % couleurs.length;
 }
