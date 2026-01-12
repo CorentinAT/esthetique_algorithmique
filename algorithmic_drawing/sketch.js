@@ -48,6 +48,7 @@ function figure_3() {
   }
 
   for (let i = 1; i <= 1100; i += 4) {
+    stroke(`rgb(255, ${(i / 1100) * 255}, ${(i / 1100) * 255})`);
     line(
       i / 2,
       (i / 10) * Math.sin(i / 20) + i / 20 + yRes / 5,
