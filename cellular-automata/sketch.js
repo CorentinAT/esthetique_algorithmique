@@ -205,74 +205,74 @@ function nextGeneration() {
               cellsCopy[i][j].health = incomingEntity.health - 1;
             }
           }
-        }
-
-        // Si un voisin est une reine, qu'un autre est une abeille, et qu'aucun ne vient dans cette direction
-        if (
-          ((top?.specie === 4 || right?.specie === 4) &&
-            (top?.specie === 1 || right?.specie === 1) &&
-            top?.direction !== 2 &&
-            right?.direction !== 3) ||
-          ((top?.specie === 4 || bottom?.specie === 4) &&
-            (top?.specie === 1 || bottom?.specie === 1) &&
-            top?.direction !== 2 &&
-            bottom?.direction !== 0) ||
-          ((top?.specie === 4 || left?.specie === 4) &&
-            (top?.specie === 1 || left?.specie === 1) &&
-            top?.direction !== 2 &&
-            left?.direction !== 1) ||
-          ((right?.specie === 4 || bottom?.specie === 4) &&
-            (right?.specie === 1 || bottom?.specie === 1) &&
-            right?.direction !== 3 &&
-            bottom?.direction !== 0) ||
-          ((right?.specie === 4 || left?.specie === 4) &&
-            (right?.specie === 1 || left?.specie === 1) &&
-            right?.direction !== 3 &&
-            left?.direction !== 1) ||
-          ((bottom?.specie === 4 || left?.specie === 4) &&
-            (bottom?.specie === 1 || left?.specie === 1) &&
-            bottom?.direction !== 0 &&
-            left?.direction !== 1)
-        ) {
-          cellsCopy[i][j].specie = 5; // Création de la larve d'abeille
-          cellsCopy[i][j].direction = Math.floor(Math.random() * 4);
-          cellsCopy[i][j].health = larvaHealth;
-        }
-
-        // Si deux voisins sont des frelons et qu'aucun ne vient dans cette direction
-        if (
-          ((top?.specie === 2 &&
-            right?.specie === 2 &&
-            top?.direction !== 2 &&
-            right?.direction !== 3) ||
-            (top?.specie === 2 &&
-              bottom?.specie === 2 &&
+        } else {
+          // Si un voisin est une reine, qu'un autre est une abeille, et qu'aucun ne vient dans cette direction
+          if (
+            ((top?.specie === 4 || right?.specie === 4) &&
+              (top?.specie === 1 || right?.specie === 1) &&
+              top?.direction !== 2 &&
+              right?.direction !== 3) ||
+            ((top?.specie === 4 || bottom?.specie === 4) &&
+              (top?.specie === 1 || bottom?.specie === 1) &&
               top?.direction !== 2 &&
               bottom?.direction !== 0) ||
-            (top?.specie === 2 &&
-              left?.specie === 2 &&
+            ((top?.specie === 4 || left?.specie === 4) &&
+              (top?.specie === 1 || left?.specie === 1) &&
               top?.direction !== 2 &&
               left?.direction !== 1) ||
-            (right?.specie === 2 &&
-              bottom?.specie === 2 &&
+            ((right?.specie === 4 || bottom?.specie === 4) &&
+              (right?.specie === 1 || bottom?.specie === 1) &&
               right?.direction !== 3 &&
               bottom?.direction !== 0) ||
-            (right?.specie === 2 &&
-              left?.specie === 2 &&
+            ((right?.specie === 4 || left?.specie === 4) &&
+              (right?.specie === 1 || left?.specie === 1) &&
               right?.direction !== 3 &&
               left?.direction !== 1) ||
-            (bottom?.specie === 2 &&
-              left?.specie === 2 &&
+            ((bottom?.specie === 4 || left?.specie === 4) &&
+              (bottom?.specie === 1 || left?.specie === 1) &&
               bottom?.direction !== 0 &&
-              left?.direction !== 1)) &&
-          top?.specie !== 6 && // Et si on n'est pas voisin d'une larve de frelon
-          right?.specie !== 6 &&
-          bottom?.specie !== 6 &&
-          left?.specie !== 6
-        ) {
-          cellsCopy[i][j].specie = 6; // Création d'une larve de frelon
-          cellsCopy[i][j].direction = Math.floor(Math.random() * 4);
-          cellsCopy[i][j].health = larvaHealth;
+              left?.direction !== 1)
+          ) {
+            cellsCopy[i][j].specie = 5; // Création de la larve d'abeille
+            cellsCopy[i][j].direction = Math.floor(Math.random() * 4);
+            cellsCopy[i][j].health = larvaHealth;
+          }
+
+          // Si deux voisins sont des frelons et qu'aucun ne vient dans cette direction
+          if (
+            ((top?.specie === 2 &&
+              right?.specie === 2 &&
+              top?.direction !== 2 &&
+              right?.direction !== 3) ||
+              (top?.specie === 2 &&
+                bottom?.specie === 2 &&
+                top?.direction !== 2 &&
+                bottom?.direction !== 0) ||
+              (top?.specie === 2 &&
+                left?.specie === 2 &&
+                top?.direction !== 2 &&
+                left?.direction !== 1) ||
+              (right?.specie === 2 &&
+                bottom?.specie === 2 &&
+                right?.direction !== 3 &&
+                bottom?.direction !== 0) ||
+              (right?.specie === 2 &&
+                left?.specie === 2 &&
+                right?.direction !== 3 &&
+                left?.direction !== 1) ||
+              (bottom?.specie === 2 &&
+                left?.specie === 2 &&
+                bottom?.direction !== 0 &&
+                left?.direction !== 1)) &&
+            top?.specie !== 6 && // Et si on n'est pas voisin d'une larve de frelon
+            right?.specie !== 6 &&
+            bottom?.specie !== 6 &&
+            left?.specie !== 6
+          ) {
+            cellsCopy[i][j].specie = 6; // Création d'une larve de frelon
+            cellsCopy[i][j].direction = Math.floor(Math.random() * 4);
+            cellsCopy[i][j].health = larvaHealth;
+          }
         }
       }
 
