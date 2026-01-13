@@ -89,6 +89,8 @@ Bonus : Vous pouvez changer `height` et `width` dans le javascript pour changer 
 
 N'hésitez pas à tester le jeu dans pleins de configuration ! (que des abeilles, peu de frelons, beaucoup de reines...) Et en changeant les paramètres sur l'interface web.
 
+Il y a un peu d'aléatoire dans le jeu (déplacement des entités). Ce n'est qu'une petite partie du programme, mais ça pourrait être bien de trouver un moyen d'enlever cette part d'aléatoire tout en gardant le jeu intéressant pour pouvoir étudier des patternes.
+
 ### Crédits
 
 Inspiration : Jeu de la vie
