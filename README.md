@@ -74,7 +74,6 @@ Pour résumer :
 - Le rapprochement entre deux frelons créé une larve de frelon, qui deviendra un frelon plus tard
 - Le rapprochement entre une abeille et une reine créé une larve d'abeille, qui deviendra une abeille plus tard
 - Les frelons ont une durée de vie
-- Les ruches sont statiques et indestructibles
 - Les reines sont immortelles
 - Les abeilles se sacrifient pour construire la ruche
 - Les frelons détruisent la ruche, mais en meurent
