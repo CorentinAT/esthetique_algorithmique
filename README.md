@@ -37,7 +37,7 @@ Voici les règles du système, appliquées à chaque génération :
 
 - Cases vides :
 
-  - Si une entité mouvante (abeille, frelon ou reine) voisine a une direction qui correspond à la case courante, alors la case vide se transforme en cette entité, prend sa direction et sa durée de vie. Sauf si c'est le cas de plusieurs entités simultanément, alors la case reste vide
+  - Si une entité mouvante (abeille, frelon ou reine) voisine a une direction qui correspond à la case courante, alors la case vide se transforme en cette entité, prend sa direction et sa durée de vie. Sauf si c'est le cas de plusieurs entités simultanément ou que l'entité est voisine d'une case sensée la tuer, auxquels cas la case reste vide
   - Si elle a pour voisins une abeille et une reine, et qu'aucun d'entre eux ne va dans sa direction, alors elle devient une larve d'abeille et prend la durée de vie correspondant aux larves
   - Si elle a pour voisins deux frelons, et qu'aucun d'entre eux ne va dans sa direction, alors elle devient une larve de frelon et prend la durée de vie correspondant aux larves, sauf si elle a aussi pour voisin une autre larve de frelon
 
@@ -46,20 +46,26 @@ Voici les règles du système, appliquées à chaque génération :
   - Se transforme en case vide si la case voisine correspondant à sa direction est vide, et qu'il n'y a pas une autre entité qui va y aller (en se basant sur la position des entités voisines à la case vide en question)
   - S'il y a quelqu'un sur la case voisine correspondant à sa direction, ou qu'il y a un conflit avec une autre entité (ce que j'ai expliqué au point précédent), alors la case reste une abeille et sa direction change aléatoirement. C'est aussi la cas si la case visée par la direction n'existe pas (l'abeille est au bord de la zone)
   - Si elle est voisine d'un frelon, elle meurt (devient une case vide)
+  - Si un voisin est une ruche, alors elle se transforme en ruche
 
 - Frelons :
 
   - Mêmes premiers et deuxièmes points que les abeilles pour le déplacement
   - Si sa durée de vie est à 0, il meurt
   - Si sa durée de vie n'est pas à 0, elle est décrémentée
+  - S'il est voisin d'une ruche, il meurt
 
 - Reines :
 
   - Mêmes premiers et deuxièmes points que les abeilles pour le déplacement
 
 - Larves :
+
   - Si sa durée de vie est à 0, elle devient l'entité correspondante (abeille ou frelon) avec une direction aléatoire. Si elle devient un frelon, elle prend la durée de vie de base d'un frelon
   - Si sa durée de vie n'est pas à 0, elle est décrémentée
+
+- Ruches :
+  - Si un voisin est un frelon, alors elle devient une case vide
 
 Pour résumer :
 
@@ -70,6 +76,8 @@ Pour résumer :
 - Les frelons ont une durée de vie
 - Les ruches sont statiques et indestructibles
 - Les reines sont immortelles
+- Les abeilles se sacrifient pour construire la ruche
+- Les frelons détruisent la ruche, mais en meurent
 
 ### Blabla technique et supplémentaire
 
@@ -81,9 +89,9 @@ Certaines logiques sont mises dans des fonctions (en bas du fichier `sketch.js`)
 
 Ça a été plus compliqué et long de prévu de gérer autant d'entité et de règles, mais le résultat correspond bien à mes idées de base.
 
-C'est en testant le jeu à la fin que je me suis rendu compte d'un problème : les frelons sont trop forts. S'ils commencent à se reproduire alors l'invasion est inévitable bien que leur reproduction soit plus régulée par rapport aux abeilles (une larve de frelon ne peut pas apparaître à côté d'une autre), et qu'ils soient les seuls avec une durée de vie qui finit par les tuer.
+C'est en testant le jeu à la fin que je me suis rendu compte d'un problème : les frelons sont trop forts. S'ils commencent à se reproduire alors l'invasion est inévitable bien que leur reproduction soit plus régulée par rapport aux abeilles (une larve de frelon ne peut pas apparaître à côté d'une autre), qu'ils soient les seuls avec une durée de vie qui finit par les tuer, et que le contact avec la ruche les tue.
 
-Si je venais à améliorer le jeu, c'est sur cet équilibre que je me concentrerais. En ajoutant de la logique avec les ruches : un frelon en contact avec une ruche la détruit, mais meurt également. Et pour mieux développer les ruches, il faudrait ajouter un mécanisme de construction de ruche par les abeilles.
+Si je venais à améliorer le jeu, c'est sur cet équilibre que je me concentrerais. Mais je n'ai pas d'idée pour l'instant.
 
 Bonus : Vous pouvez changer `height` et `width` dans le javascript pour changer la taille du plateau.
 
