@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cellular-automata</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/p5.js"></script>
+    <script src="js/addons/p5.sound.min.js"></script>
+  </head>
+  <body>
+    <h1>Bee of Life</h1>
+    <div id="rules">
+      <p>Dans Bee of Life, vivez au coeur d'un écosystème abeillesque !</p>
+      <p>
+        Placez vos abeilles qui pourront se déplacer librement, un contact avec
+        leur reine donnera naissance à une larve, qui deviendra elle-même une
+        nouvelle abeille.
+      </p>
+      <p>
+        Mais attention aux frelons ! Ceux-ci tuent les abeilles avec lesquelles
+        ils rentrent en contact et se reproduisent entre eux quand ils
+        s'approchent. En revanche, ils n'osent pas s'attaquer à la reine.
+      </p>
+      <p>
+        Les ruches servent de mur pour le moment, leurs parois sont fixes et
+        indestructibles. Leur comportement sera développé dans une prochaine
+        mise à jour.
+      </p>
+      <p>
+        Pour placer un élément sur la carte, sélectionnez son type en haut à
+        gauche de la zone de jeu, et cliquez là où vous voulez le placer.
+      </p>
+      <p>
+        Vous pouvez placer plusieurs éléments d'un coup en maintenant le clic et
+        en déplaçant la souris.
+      </p>
+      <p>Cliquer sur une case déjà remplie la videra.</p>
+      <p>Vous pouvez ajouter des éléments même lorsque le jeu est en route.</p>
+      <p>
+        Conseil : n'abusez pas des frelons et amusez-vous à changer leur durée
+        de vie.
+      </p>
+    </div>
+
+    <hr />
+    <div id="commands">
+      <select id="specie-selector">
+        <option value="1">Abeille</option>
+        <option value="2">Frelon</option>
+        <option value="3">Ruche</option>
+        <option value="4">Reine</option>
+      </select>
+      <button onclick="reset()">Réinitialiser</button>
+      <button onclick="nextGeneration()">Génération suivante</button>
+      <p id="generation">0</p>
+      <button onclick="play()" id="play">Lancer</button>
+      <button onclick="pause()" id="pause">Pause</button>
+      <div>
+        <p>Vitesse</p>
+        <input
+          id="speed"
+          oninput="changeSpeed()"
+          type="range"
+          min="0.5"
+          max="10"
+          value="3"
+          step="0.1"
+        />
+      </div>
+      <div>
+        <p>Durée de l'état de larve</p>
+        <input
+          id="larva"
+          oninput="changeLarvaHealth()"
+          type="number"
+          min="0"
+          max="50"
+          value="3"
+          step="1"
+        />
+      </div>
+      <div>
+        <p>Durée de vie d'un frelon</p>
+        <input
+          id="hornet"
+          oninput="changeHornetHealth()"
+          type="number"
+          min="1"
+          max="200"
+          value="20"
+          step="1"
+        />
+      </div>
+    </div>
+    <div id="canvas-container"></div>
+    <script src="sketch.js"></script>
+  </body>
+</html>

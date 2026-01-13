@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  min-height: 100vh;
+  background: #f0f0f0;
+}
+
+#commands {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#rules {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+#rules p {
+  text-align: center;
+}
+
+hr {
+  width: 100%;
+}
