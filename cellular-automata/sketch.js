@@ -161,7 +161,8 @@ function nextGeneration() {
           !cellMovesInDirection(right, 3) &&
           !cellMovesInDirection(bottom, 0) &&
           !cellMovesInDirection(left, 1) &&
-          !hasHornetNeighbor(i - 1, j)
+          !beeHasSpecificNeighbor(i + 1, j, 2) &&
+          !beeHasSpecificNeighbor(i + 1, j, 3)
         ) {
           incomingEntity = top;
         }
@@ -170,7 +171,8 @@ function nextGeneration() {
           !cellMovesInDirection(top, 2) &&
           !cellMovesInDirection(bottom, 0) &&
           !cellMovesInDirection(left, 1) &&
-          !hasHornetNeighbor(i, j + 1)
+          !beeHasSpecificNeighbor(i, j - 1, 2) &&
+          !beeHasSpecificNeighbor(i, j - 1, 3)
         ) {
           incomingEntity = right;
         }
@@ -179,7 +181,8 @@ function nextGeneration() {
           !cellMovesInDirection(top, 2) &&
           !cellMovesInDirection(right, 3) &&
           !cellMovesInDirection(left, 1) &&
-          !hasHornetNeighbor(i + 1, j)
+          !beeHasSpecificNeighbor(i - 1, j, 2) &&
+          !beeHasSpecificNeighbor(i - 1, j, 3)
         ) {
           incomingEntity = bottom;
         }
@@ -188,7 +191,8 @@ function nextGeneration() {
           !cellMovesInDirection(top, 2) &&
           !cellMovesInDirection(right, 3) &&
           !cellMovesInDirection(bottom, 0) &&
-          !hasHornetNeighbor(i, j - 1)
+          !beeHasSpecificNeighbor(i, j + 1, 2) &&
+          !beeHasSpecificNeighbor(i, j + 1, 3)
         ) {
           incomingEntity = left;
         }
@@ -344,11 +348,19 @@ function nextGeneration() {
               cells[i - 1][j + 1].direction === 0));
 
         if (
+          cell.specie === 1 &&
+          (top?.specie === 3 ||
+            right?.specie === 3 ||
+            bottom?.specie === 3 ||
+            left?.specie === 3)
+        ) {
+          cellsCopy[i][j].specie = 3;
+        } else if (
           (conflitDirection0 ||
             conflitDirection1 ||
             conflitDirection2 ||
             conflitDirection3) &&
-          !hasHornetNeighbor(i, j)
+          !beeHasSpecificNeighbor(i, j, 2)
         ) {
           cellsCopy[i][j].direction = Math.floor(Math.random() * 4);
           if (cell.specie === 2) {
@@ -365,8 +377,30 @@ function nextGeneration() {
             !conflitDirection1 &&
             !conflitDirection2 &&
             !conflitDirection3) ||
-          (cell.specie === 1 && hasHornetNeighbor(i, j)) ||
+          (cell.specie === 1 && beeHasSpecificNeighbor(i, j, 2)) ||
           (cell.specie === 2 && cell.health === 0)
+        ) {
+          cellsCopy[i][j].specie = 0;
+        }
+      }
+
+      if (cell.specie === 2) {
+        if (
+          top?.specie === 3 ||
+          right?.specie === 3 ||
+          bottom?.specie === 3 ||
+          left?.specie === 3
+        ) {
+          cellsCopy[i][j].specie = 0;
+        }
+      }
+
+      if (cell.specie === 3) {
+        if (
+          top?.specie === 2 ||
+          right?.specie === 2 ||
+          bottom?.specie === 2 ||
+          left?.specie === 2
         ) {
           cellsCopy[i][j].specie = 0;
         }
@@ -398,17 +432,17 @@ function nextGeneration() {
   document.getElementById("generation").innerText = generation;
 }
 
-function hasHornetNeighbor(i, j) {
+function beeHasSpecificNeighbor(i, j, neighborSpecie) {
   // Vérification de la validité des coordonnées données
   if (i < 0 || i >= cells.length || j < 0 || j >= cells[0].length) {
     return false;
   }
   return (
-    cells[i][j].specie === 1 && // S'applique seulement aux abeilles, pas utile sinon
-    ((i >= 1 && cells[i - 1][j].specie === 2) ||
-      (i < cells.length - 1 && cells[i + 1][j].specie === 2) ||
-      (j >= 1 && cells[i][j - 1].specie === 2) ||
-      (j < cells[i].length - 1 && cells[i][j + 1].specie === 2))
+    cells[i][j].specie === 1 && // S'applique seulement aux abeilles
+    ((i >= 1 && cells[i - 1][j].specie === neighborSpecie) ||
+      (i < cells.length - 1 && cells[i + 1][j].specie === neighborSpecie) ||
+      (j >= 1 && cells[i][j - 1].specie === neighborSpecie) ||
+      (j < cells[i].length - 1 && cells[i][j + 1].specie === neighborSpecie))
   );
 }
 
