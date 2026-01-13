@@ -41,6 +41,7 @@
         Conseil : n'abusez pas des frelons et amusez-vous à changer leur durée
         de vie.
       </p>
+      <p>Conseil 2 : pas trop de reines, elles sont immortelles.</p>
     </div>
 
     <hr />
@@ -71,10 +72,10 @@
       <div>
         <p>Durée de l'état de larve</p>
         <input
-          id="larva"
+          id="larva-health"
           oninput="changeLarvaHealth()"
           type="number"
-          min="0"
+          min="1"
           max="50"
           value="3"
           step="1"
@@ -83,7 +84,7 @@
       <div>
         <p>Durée de vie d'un frelon</p>
         <input
-          id="hornet"
+          id="hornet-health"
           oninput="changeHornetHealth()"
           type="number"
           min="1"
@@ -91,6 +92,32 @@
           value="20"
           step="1"
         />
+      </div>
+    </div>
+    <div id="definitions">
+      <div>
+        <div id="bee"></div>
+        Abeille
+      </div>
+      <div>
+        <div id="hornet"></div>
+        Frelon
+      </div>
+      <div>
+        <div id="hive"></div>
+        Ruche
+      </div>
+      <div>
+        <div id="queen"></div>
+        Abeille reine
+      </div>
+      <div>
+        <div id="bee-larva"></div>
+        Larve d'abeille
+      </div>
+      <div>
+        <div id="hornet-larva"></div>
+        Larve de frelon
       </div>
     </div>
     <div id="canvas-container"></div>

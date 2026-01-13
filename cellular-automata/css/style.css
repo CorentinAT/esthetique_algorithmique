@@ -14,7 +14,8 @@ body {
   background: #f0f0f0;
 }
 
-#commands {
+#commands,
+#definitions {
   display: flex;
   gap: 15px;
   align-items: center;
@@ -37,4 +38,40 @@ body {
 
 hr {
   width: 100%;
+}
+
+#definitions div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+#definitions div div {
+  width: 20px;
+  height: 20px;
+  border: solid 1px;
+}
+
+#bee {
+  background-color: #f7e93e;
+}
+
+#hornet {
+  background-color: red;
+}
+
+#hive {
+  background-color: orange;
+}
+
+#queen {
+  background-color: blue;
+}
+
+#bee-larva {
+  background-color: brown;
+}
+
+#hornet-larva {
+  background-color: purple;
 }
