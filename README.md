@@ -2,7 +2,7 @@
 
 Corentin ALBERT IMAC1
 
-On peut voir les projets en ouvrant les fichiers `index.html`.
+On peut voir les projets en ouvrant les fichiers `index.html`. (sauf les fractales)
 
 ## Dessin algorithmique
 
@@ -103,3 +103,9 @@ Il y a un peu d'aléatoire dans le jeu (déplacement des entités). Ce n'est qu'
 Inspiration : Jeu de la vie
 
 Aide dans la recherche de bugs dans les tas de conditions : Copilot
+
+## Fractales
+
+Les infos sur les fractales sont dans le README du projet lui-même.
+
+Pour voir le projet original (avec les commits), allez sur [ce dépôt](https://github.com/CorentinAT/ponzi_simulator)

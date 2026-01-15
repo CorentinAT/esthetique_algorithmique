@@ -1,0 +1,126 @@
+* {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.render {
+  max-width: 50%;
+  display: flex;
+}
+
+.infotab {
+  max-width: 50%;
+  display: flex;
+}
+
+body {
+  display: flex;
+  max-height: 100%;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+#propales {
+  display: flex;
+  gap: 50px;
+}
+
+#propales div {
+  border: solid 1px;
+  padding: 20px;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+}
+
+#propales .selected {
+  border-color: rgb(0, 255, 0);
+  background-color: rgba(0, 255, 0, 0.329);
+}
+
+button {
+  border: solid 2px;
+  border-color: white;
+  background: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:not(.disabled):hover {
+  background-color: rgba(0, 255, 0, 0.329);
+}
+
+button.disabled {
+  cursor: not-allowed;
+  opacity: 70%;
+}
+
+#describe {
+  margin: 20px;
+  text-align: center;
+}
+
+#game {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  align-items: center;
+}
+
+#rules {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+#infos {
+  display: flex;
+  gap: 20px;
+}
+
+#event {
+  border: solid 1px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#skip-event {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#skip-event:hover {
+  color: rgb(10, 255, 10);
+}
+
+#titre-event,
+#propale1-name,
+#propale2-name {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  body {
+    overflow-y: hidden;
+  }
+}
