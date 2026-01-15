@@ -192,8 +192,15 @@ function action() {
   let ended = true;
   for (let i = 0; i < spinning.length; i++) {
     if (spinning[i]) {
-      spinning[i] = false;
-      speed[i] = 0;
+      // On ralentit petit à petit jusqu'à l'arrêt
+      const interval = setInterval(() => {
+        speed[i] -= 0.02;
+        if (speed[i] <= 0) {
+          speed[i] = 0;
+          spinning[i] = false;
+          clearInterval(interval);
+        }
+      }, 100);
       ended = false;
       break;
     }
