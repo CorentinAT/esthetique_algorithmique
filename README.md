@@ -111,3 +111,11 @@ Les infos sur les fractales sont dans le README du projet lui-même.
 Pour voir le projet original (avec les commits), allez sur [ce dépôt](https://github.com/CorentinAT/ponzi_simulator)
 
 Mais pour résumer, le projet est visible [ici](https://ponzi.super-sympa.fr/)
+
+## Littérature digitale
+
+Le travail est dans le dossier `digital_litterature`.
+
+Quatre roues de la fortune tournent en même temps. Au clic (ou à l'appui sur Espace), une des roues s'arrête. Après quatre clics, une phrase romantique est formée !
+
+Les mots utilisés viennent de l'algorithme de Strachey, traduits en français.
