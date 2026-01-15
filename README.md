@@ -109,3 +109,5 @@ Aide dans la recherche de bugs dans les tas de conditions : Copilot
 Les infos sur les fractales sont dans le README du projet lui-même.
 
 Pour voir le projet original (avec les commits), allez sur [ce dépôt](https://github.com/CorentinAT/ponzi_simulator)
+
+Mais pour résumer, le projet est visible [ici](https://ponzi.super-sympa.fr/)
