@@ -1,0 +1,572 @@
+[
+  {
+    "id": 1,
+    "nom": "Alex",
+    "bag": 200,
+    "cout": 200,
+    "rendement": 0.01,
+    "influence": 0.02,
+    "text": "Alex coûte {cout} biff et arrive avec un capital de {bag} biff. Grâce à son automate cellulaire musical, il améliore le rendement de {rendement}%",
+    "upgrade_id": 1
+  },
+  {
+    "id": 2,
+    "nom": "Léna",
+    "bag": 600,
+    "cout": 400,
+    "rendement": -0.04,
+    "influence": 0.06,
+    "text": "Léna coûte {cout} biff et arrive avec un capital de {bag} biff. Cependant elle baisse le rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 3,
+    "nom": "Elouan L",
+    "bag": 100,
+    "cout": 600,
+    "rendement": 0.05,
+    "influence": -0.05,
+    "text": "Elouan coûte {cout} biff et arrive avec un capital de {bag} biff. Ses parts dans différentes usines de production de boissons alcoolisées augmentent le rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 4,
+    "nom": "Benoit",
+    "bag": 1000,
+    "cout": 500,
+    "rendement": -0.03,
+    "influence": 0.03,
+    "text": "Benoit coûte {cout} biff et arrive avec un capital de {bag} biff. à cause de ses mauvaises prévisions météo, il baisse le rendu de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 5,
+    "nom": "Yanis",
+    "bag": 200,
+    "cout": 1000,
+    "rendement": 0.12,
+    "influence": 0.05,
+    "text": "Yanis coûte {cout} biff et arrive avec un capital de {bag} biff. Il augmente le rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 6,
+    "nom": "Matthieu",
+    "bag": 400,
+    "cout": 200,
+    "rendement": 0.0,
+    "influence": -0.04,
+    "text": "Matthieu coûte {cout} biff mais rapporte {bag} biff grâce à son business de cartes Pokémon.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 7,
+    "nom": "Agathe",
+    "bag": 1500,
+    "cout": 600,
+    "rendement": -0.08,
+    "influence": -0.05,
+    "text": "Agathe coûte {cout} biff et arrive avec un capital de {bag} biff. Cependant elle baisse le rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 8,
+    "nom": "Marine",
+    "bag": 300,
+    "cout": 600,
+    "rendement": -0.02,
+    "influence": 0.08,
+    "text": "Marine coûte {cout} biff et arrive avec un capital de {bag} biff. Cependant elle baisse le rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 9,
+    "nom": "Alina",
+    "bag": 100,
+    "cout": 700,
+    "rendement": 0.05,
+    "influence": 0.08,
+    "text": "Alina coûte {cout} biff et arrive avec un capital de {bag} biff. Elle augmente le rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 10,
+    "nom": "Alex G.",
+    "bag": 100,
+    "cout": 200,
+    "rendement": -0.12,
+    "influence": -0.08,
+    "text": "Alex coûte {cout} biff et arrive avec un capital de {bag} biff. Cependant, il baisse le rendement de {rendement}%, c'est un mauvais investisseur.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 11,
+    "nom": "Anthony",
+    "bag": 500,
+    "cout": 500,
+    "rendement": 0.07,
+    "influence": 0.1,
+    "text": "Anthony coûte {cout} biff et arrive avec un capital de {bag} biff. Grâce à ses multiples diplômes, il augmente le rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 12,
+    "nom": "Oussama Ammar",
+    "bag": 500,
+    "cout": 200,
+    "rendement": -0.25,
+    "influence": 0.15,
+    "text": "Oussama coûte {cout} biff et arrive avec un capital de {bag} biff. Il baisse le rendement de {rendement}%, n'hésitez pas à ne vraiment pas lui faire confiance.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 13,
+    "nom": "Romane J.",
+    "bag": 200,
+    "cout": 200,
+    "rendement": 0.03,
+    "influence": 0.06,
+    "text": "Romane coûte {cout} biff et arrive avec un capital de {bag} biff. Elle baisse le rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 14,
+    "nom": "Novelli",
+    "bag": 100,
+    "cout": 400,
+    "rendement": -0.1,
+    "influence": -0.1,
+    "text": "Novelli coûte {cout} biff et arrive avec un capital de {bag} biff. Il applique une division euclidienne de 4600/160% sur votre rendement.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 15,
+    "nom": "Corentin",
+    "bag": 600,
+    "cout": 200,
+    "rendement": 0.1,
+    "influence": 0.1,
+    "text": "Corentin coûte {cout} biff et arrive avec un capital de {bag} biff. Vu qu'il est super sympa, il augmente votre rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 16,
+    "nom": "Laïn",
+    "bag": 1100,
+    "cout": 800,
+    "rendement": 0.04,
+    "influence": 0.04,
+    "text": "Laïn coûte {cout} biff et arrive avec un capital de {bag} biff. Bientôt le disque d'or, augmentation du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 17,
+    "nom": "Nils",
+    "bag": 600,
+    "cout": 400,
+    "rendement": -0.04,
+    "influence": -0.02,
+    "text": "Nils coûte {cout} biff et arrive avec un capital de {bag} biff. Il t'enferme dans les cavernes, baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 18,
+    "nom": "Lalie",
+    "bag": 0,
+    "cout": 400,
+    "rendement": 0,
+    "influence": 0.04,
+    "text": "Lalie coûte {cout} biff, mais vous ne gagnez rien à cause des ligaments croisés.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 19,
+    "nom": "Yasmine",
+    "bag": 300,
+    "cout": 200,
+    "rendement": 0.03,
+    "influence": 0.04,
+    "text": "Yasmine coûte {cout} biff et arrive avec un capital de {bag} biff. Augmentation du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 20,
+    "nom": "Qays",
+    "bag": 600,
+    "cout": 800,
+    "rendement": -0.05,
+    "influence": 0.15,
+    "text": "Qays coûte {cout} biff et arrive avec un capital de {bag} biff. Baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 21,
+    "nom": "Jules",
+    "bag": 300,
+    "cout": 500,
+    "rendement": -0.1,
+    "influence": -0.05,
+    "text": "Jules coûte {cout} biff et arrive avec un capital de {bag} biff. Il te fait un tunnel en parlant de CoolLab, baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 22,
+    "nom": "Jade",
+    "bag": 800,
+    "cout": 700,
+    "rendement": 0.04,
+    "influence": -0.04,
+    "text": "Jade coûte {cout} biff et arrive avec un capital de {bag} biff. Augmentation du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 23,
+    "nom": "Kellian",
+    "bag": 800,
+    "cout": 400,
+    "rendement": -0.06,
+    "influence": -0.06,
+    "text": "Kellian coûte {cout} biff et arrive avec un capital de {bag} biff. Il refile le Covid à toute l'entreprise, baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 24,
+    "nom": "Chloé",
+    "bag": 300,
+    "cout": 200,
+    "rendement": 0.2,
+    "influence": 0.02,
+    "text": "Chloé coûte {cout} biff et arrive avec un capital de {bag} biff. Augmentation du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 25,
+    "nom": "Raphaël",
+    "bag": 200,
+    "cout": 400,
+    "rendement": 0.04,
+    "influence": 0.04,
+    "text": "Raphaël coûte {cout} biff et arrive avec un capital de {bag} biff. Augmentation du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 26,
+    "nom": "Julie",
+    "bag": 1000,
+    "cout": 800,
+    "rendement": -0.05,
+    "influence": 0.1,
+    "text": "Julie coûte {cout} biff et arrive avec un capital de {bag} biff. Baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 27,
+    "nom": "Mila",
+    "bag": 1500,
+    "cout": 1000,
+    "rendement": -0.05,
+    "influence": 0.05,
+    "text": "Mila coûte {cout} biff et arrive avec un capital de {bag} biff. Baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 28,
+    "nom": "Romana",
+    "bag": 600,
+    "cout": 300,
+    "rendement": 0.02,
+    "influence": 0.1,
+    "text": "Romana coûte {cout} biff et arrive avec un capital de {bag} biff. Baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 29,
+    "nom": "Julien",
+    "bag": 100,
+    "cout": 300,
+    "rendement": -0.06,
+    "influence": -0.06,
+    "text": "Julien coûte {cout} biff et arrive avec un capital de {bag} biff. Il tappe très fort sur la table pour que vous cédiez une part du gâteau, baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 30,
+    "nom": "Romane M.",
+    "bag": 1200,
+    "cout": 700,
+    "rendement": -0.05,
+    "influence": -0.05,
+    "text": "Romane coûte {cout} biff et arrive avec un capital de {bag} biff. La prépa c'est dur, baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 31,
+    "nom": "Romane V.",
+    "bag": 1800,
+    "cout": 1200,
+    "rendement": -0.02,
+    "influence": -0.02,
+    "text": "Romane coûte {cout} biff et arrive avec un capital de {bag} biff. Baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 32,
+    "nom": "Elea",
+    "bag": 100,
+    "cout": 500,
+    "rendement": 0.1,
+    "influence": 0.08,
+    "text": "Elea coûte {cout} biff et arrive avec un capital de {bag} biff. Elle vous cède des parts dans son usine de cookies du Crous, augmentation du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 33,
+    "nom": "Justine",
+    "bag": 1000,
+    "cout": 800,
+    "rendement": 0.07,
+    "influence": 0.05,
+    "text": "Justine coûte {cout} biff et arrive avec un capital de {bag} biff. Elle te fait un emploi du temps tout propre, augmente du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 34,
+    "nom": "Lucille",
+    "bag": 600,
+    "cout": 400,
+    "rendement": -0.05,
+    "influence": -0.05,
+    "text": "Lucille coûte {cout} biff et arrive avec un capital de {bag} biff. Elle investit une partie du biff dans la Tech, baisse du rendement de {rendement}% (ce n'est pas rentable Lucille).",
+    "upgrade_id": 1
+  },
+  {
+    "id": 35,
+    "nom": "Souksana",
+    "bag": 800,
+    "cout": 500,
+    "rendement": 0,
+    "influence": 0.1,
+    "text": "Souksana coûte {cout} biff et arrive avec un capital de {bag} biff.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 36,
+    "nom": "Roméo",
+    "bag": 1000,
+    "cout": 200,
+    "rendement": -0.2,
+    "influence": -0.2,
+    "text": "Roméo coûte {cout} biff et arrive avec un capital de {bag} biff. Il instaure l'anarchie dans l'entreprise, baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 37,
+    "nom": "Guillaume",
+    "bag": 0,
+    "cout": 700,
+    "rendement": 0.1,
+    "influence": 0.1,
+    "text": "Guillaume coûte {cout} biff. Il ne rapporte pas de biff parce qu'il a payé une carte graphique pour faire du blender mais augmente le rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 38,
+    "nom": "Killian",
+    "bag": 200,
+    "cout": 400,
+    "rendement": -0.05,
+    "influence": -0.05,
+    "text": "Killian coûte {cout} biff et arrive avec un capital de {bag} biff. Ses sites web ne se vendent pas, baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 39,
+    "nom": "Imane",
+    "bag": 300,
+    "cout": 500,
+    "rendement": 0.06,
+    "influence": 0.06,
+    "text": "Imane coûte {cout} biff et arrive avec un capital de {bag} biff. Ses compétences sur After Effects augmente le rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 40,
+    "nom": "Louise",
+    "bag": 600,
+    "cout": 600,
+    "rendement": -0.05,
+    "influence": 0.1,
+    "text": "Louise coûte {cout} biff et arrive avec un capital de {bag} biff. Mais les performances misérables de son microsoft surface baissent le rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 41,
+    "nom": "Quentin B.",
+    "bag": 1500,
+    "cout": 700,
+    "rendement": 0,
+    "influence": 0.1,
+    "text": "Quentin coûte {cout} biff et investit toute la trésorerie du GIC, +{bag} biff.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 42,
+    "nom": "Honorine",
+    "bag": 300,
+    "cout": 500,
+    "rendement": 0.04,
+    "influence": 0.08,
+    "text": "Honorine coûte {cout} biff et arrive avec un capital de {bag} biff. Elle te met dans le mail hebdo de l'école, augmentation du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 43,
+    "nom": "Ilyass",
+    "bag": 300,
+    "cout": 600,
+    "rendement": -0.1,
+    "influence": 0.05,
+    "text": "Ilyass coûte {cout} biff et arrive avec un capital de {bag} biff. Il casse les oreilles de tout le monde en jouant de l'oud en boucle. Rendement -{rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 44,
+    "nom": "Pauline",
+    "bag": 0,
+    "cout": 200,
+    "rendement": -0.1,
+    "influence": 0.05,
+    "text": "Pauline coûte {cout} biff. Elle passe son temps à compter combien d'objectif 35mm f2.8 803z a dans son placard. Baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 45,
+    "nom": "Quentin L.",
+    "bag": 0,
+    "cout": 800,
+    "rendement": 0,
+    "influence": 0,
+    "text": "Quentin coûte {cout} biff. Il vous demande de payer son opération du pouce.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 46,
+    "nom": "Emmanuel Macron",
+    "bag": 4000,
+    "cout": 2000,
+    "rendement": -0.4,
+    "influence": 0.3,
+    "text": "Emmanuel Macron coûte {cout} biff et arrive avec le capital du parti Renaissance ({bag} biff), baisse du rendement de {rendement}%. ",
+    "upgrade_id": 1
+  },
+  {
+    "id": 47,
+    "nom": "Leo",
+    "bag": 100,
+    "cout": 500,
+    "rendement": -0.1,
+    "influence": 0.1,
+    "text": "Leo coûte {cout} biff et arrive avec un capital de {bag} biff. Baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 48,
+    "nom": "Guilhem",
+    "bag": 0,
+    "cout": 400,
+    "rendement": -0.1,
+    "influence": -0.05,
+    "text": "Guilhem coûte {cout} biff. Guimii music n'est pas encore assez rentable, -{rendement}% rendement.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 49,
+    "nom": "Chevreuil",
+    "bag": 2200,
+    "cout": 1400,
+    "rendement": 0.1,
+    "influence": -0.15,
+    "text": "Chevreuil coûte {cout} biff et arrive avec un capital de {bag} biff. Il reconnait les équations caractéristiques de la bourse, +{rendement}% de rendement.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 50,
+    "nom": "Arthur",
+    "bag": 1600,
+    "cout": 400,
+    "rendement": -0.2,
+    "influence": 0.1,
+    "text": "Arthur coûte {cout} biff et arrive avec un capital de {bag} biff. Sa boîte de nuit : 'Le trashcan', croule sous les dettes, -{rendement}% rendement. ",
+    "upgrade_id": 1
+  },
+  {
+    "id": 51,
+    "nom": "Astrid",
+    "bag": 500,
+    "cout": 300,
+    "rendement": -0.03,
+    "influence": -0.05,
+    "text": "Astrid coûte {cout} biff et arrive avec un capital de {bag} biff. Les mots de passe de son application de secret santa ont fuité, baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 52,
+    "nom": "Elouan R",
+    "bag": 450,
+    "cout": 450,
+    "rendement": -0.02,
+    "influence": 0.05,
+    "text": "Elouan coûte {cout} biff et arrive avec un capital de {bag} biff. Il se perd pendant l'UTMB, vous devez payer ses recherches. Baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 53,
+    "nom": "Aimé",
+    "bag": 300,
+    "cout": 1200,
+    "rendement": 0.2,
+    "influence": 0.1,
+    "text": "Aimé coûte {cout} biff et arrive avec un capital de {bag} biff. Son esprit de jeune entrepreneur augmente le rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 54,
+    "nom": "Marc",
+    "bag": 400,
+    "cout": 100,
+    "rendement": -0.01,
+    "influence": -0.06,
+    "text": "Marc coûte {cout} biff et arrive avec un capital de {bag} biff. Ses idées Marxistes l'empêchent de s'impliquer dans l'activité de l'organisation. Baisse du rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 55,
+    "nom": "Clément",
+    "bag": 0,
+    "cout": 800,
+    "rendement": 0,
+    "influence": -0.08,
+    "text": "Clément coûte {cout} biff mais claque tout dans un iPhone 16 pro max 1 to. Ne rapporte rien.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 56,
+    "nom": "Octave",
+    "bag": 600,
+    "cout": 500,
+    "rendement": -0.1,
+    "influence": 0.05,
+    "text": "Octave coûte {cout} biff et arrive avec un capital de {bag} biff. Sa livraison hebdomadaire de palettes de Redbull baisse le rendement de {rendement}%.",
+    "upgrade_id": 1
+  },
+  {
+    "id": 57,
+    "nom": "Xavier",
+    "bag": 700,
+    "cout": 900,
+    "rendement": 0.08,
+    "influence": 0.05,
+    "text": "Xavier coûte {cout} biff et arrive avec un capital de {bag} biff. Il fait un graphe des données de l'organisation pour optimiser ses performances. Rendement +{rendement}%.",
+    "upgrade_id": 1
+  }
+]

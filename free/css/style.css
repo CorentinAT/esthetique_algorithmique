@@ -1,0 +1,249 @@
+:root {
+  --primary-color: rgb(0, 255, 0);
+  --primary-background: rgba(0, 255, 0, 0.329);
+}
+
+* {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.render {
+  max-width: 50%;
+  display: flex;
+}
+
+.infotab {
+  max-width: 50%;
+  display: flex;
+}
+
+input,
+body {
+  background-color: black;
+}
+
+body {
+  display: flex;
+  max-height: 100%;
+  overflow-x: hidden;
+}
+
+#propales {
+  display: flex;
+  gap: 50px;
+  width: 90%;
+}
+
+#propales div {
+  border: solid 1px;
+  padding: 20px;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+#propales .selected {
+  border-color: var(--primary-color);
+  background-color: var(--primary-background);
+}
+
+#stats {
+  display: flex;
+  gap: 24px;
+}
+
+button {
+  border: solid 2px;
+  border-color: white;
+  background: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:not(.disabled):hover {
+  background-color: var(--primary-background);
+}
+
+button.disabled {
+  cursor: not-allowed;
+  opacity: 70%;
+}
+
+#describe {
+  margin: 20px;
+  text-align: center;
+}
+
+#game {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  align-items: center;
+}
+
+#rules {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  gap: 10px;
+}
+
+#infos {
+  display: flex;
+  gap: 20px;
+  text-align: center;
+}
+
+#event {
+  border: solid 1px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#skip-event {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#skip-event:hover {
+  color: var(--primary-color);
+}
+
+#titre-event,
+#propales > div > p:first-of-type {
+  font-weight: bold;
+}
+
+#pyramid {
+  position: relative;
+}
+
+#spheres {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.sphere {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #00ff00;
+  opacity: 0.7;
+}
+
+.sphere.active {
+  animation: float 3s ease-in-out infinite;
+}
+
+dialog {
+  background-color: black;
+  max-height: 50%;
+}
+
+dialog *:not(input) {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  overflow-y: auto;
+}
+
+td,
+th {
+  border: solid 1px white;
+}
+
+th,
+td {
+  padding: 10px 15px;
+}
+
+input {
+  font-size: large;
+  width: 100%;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+#scores-actions {
+  margin-bottom: 15px;
+}
+
+#end form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+#close-end:hover {
+  background-color: rgba(255, 0, 0, 0.239);
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    flex-direction: column-reverse;
+  }
+
+  #pyramid {
+    display: none;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  #propales-text {
+    text-align: center;
+  }
+
+  #start {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  body {
+    overflow-y: hidden;
+  }
+
+  #rules {
+    overflow-y: auto;
+  }
+}
+
+@keyframes float {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

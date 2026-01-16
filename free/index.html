@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Ponzi simulator</title>
+  </head>
+  <body>
+    <div id="pyramid">
+      <div id="spheres">
+        <div class="sphere active"></div>
+      </div>
+    </div>
+    <div id="rules">
+      <h1>Pyramide de Ponzi simulator</h1>
+      <button class="scores-button">Voir les scores</button>
+      <p>
+        Ce simulateur vous met dans la peau d'un
+        <b>escroc en herbe avec des rêves de richesse pleins la tête.</b>
+      </p>
+
+      <p>
+        En vous inspirant des plus grandes arnaques qui ont existé, vous décidez
+        de créer une <b>Pyramide de Ponzi</b> à partir de vos fonds financiers
+        personnels.
+      </p>
+
+      <p>
+        Vous êtes alors à la recherche d'investisseurs véreux, à qui vous
+        promettez des taux d'intérêts très importants après leur investissement.
+        Mais attention !
+        <b>Ces investisseurs ne sont pas toujours très fiables</b> et peuvent
+        faire évoluer votre rendement dans le bon sens, ou dans le mauvais...
+      </p>
+      <p>
+        Grâce à ces investisseurs, votre organisation pourra toucher de
+        nouvelles personnes, recruter de nouveaux membres qui pourront à nouveau
+        en amener dans la boucle, pour former une véritable pyramide.
+      </p>
+      <p>
+        À vous de saisir les bonnes opportunités pour
+        <b>faire évoluer votre business</b> et pouvoir partir, laissant sans
+        nouvelles vos fidèles membres et investisseurs, avec
+        <b>un maximum d'argent.</b>
+      </p>
+      <p>
+        Faites également attention aux évènements extérieurs, qui peuvent avoir
+        <b>un impact direct et fort sur votre organisation.</b>
+      </p>
+      <p>
+        N'hésitez pas à enchaîner les parties pour tenter de faire le meilleur
+        score possible et
+        <b>découvrir les différents investisseurs et évènements ! </b>
+      </p>
+      <p>
+        Précisions : en plus de votre biff, vous devez gérer votre
+        <b>rendement</b> et votre <b>influence.</b> Chaque tour,
+        <b>votre biff est multiplié par votre rendement,</b> et
+        <b>l'influence multiplie l'apport en biff des investisseurs </b> sans
+        changer leur coût.
+      </p>
+      <button id="start">Commencer</button>
+    </div>
+    <div id="game">
+      <h1>Pyramide de Ponzi simulator</h1>
+      <button class="scores-button">Voir les scores</button>
+      <div id="infos">
+        <div>Biff : <span id="biff"></span></div>
+        <div>Rendement : <span id="rendement"></span></div>
+        <div>Influence : <span id="influence"></span></div>
+        <div>Investisseurs : <span id="investisseurs">0</span></div>
+      </div>
+      <p id="propales-text">
+        Vous avez reçu deux nouvelles propositions d'investissement !
+      </p>
+      <div id="propales"></div>
+
+      <div id="event">
+        <h2>Nouvel évènement !</h2>
+        <p id="titre-event"></p>
+        <p id="skip-event">Compris</p>
+      </div>
+
+      <p id="describe"></p>
+      <div id="stats">
+        <p id="addgain"></p>
+        <p id="addrendement"></p>
+        <p id="addinfluence"></p>
+      </div>
+
+      <button id="acceptpropale">Accepter la propale</button>
+    </div>
+
+    <dialog id="scores">
+      <h2>Scores</h2>
+      <div id="scores-actions">
+        <button id="refresh-scores">Actualiser</button>
+        <button id="close-scores">Fermer</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Rang</th>
+            <th>Pseudo</th>
+            <th>Biff</th>
+            <th>Nombre de tours</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </dialog>
+
+    <dialog id="end">
+      <h2 id="end-title">Fin</h2>
+      <p id="end-text"></p>
+      <form id="score-form">
+        <label>
+          <span><b>Publier le score</b> (optionnel)</span>
+          <input id="username" type="text" placeholder="Pseudo..." required
+        /></label>
+        <div>
+          <button type="button" id="close-end">Quitter</button>
+          <button type="submit">Publier</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script class="render" type="module" src="js/three.js"></script>
+    <script class="infotab" type="module" src="js/script.js"></script>
+    <script class="infotab" type="module" src="js/scores.js"></script>
+  </body>
+</html>
