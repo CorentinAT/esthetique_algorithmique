@@ -6,6 +6,8 @@ On peut voir les projets en ouvrant les fichiers `index.html`. (sauf les fractal
 
 ## Dessin algorithmique
 
+![Dessin algorithmique](screenshots/dessin_algorithmique.png)
+
 Le travail est dans le dossier `algorithmic_drawing`, dans le fichier `sketch.js`.
 
 Il y a les deux dessins faits à partir du livre, que nous avons fait le matin. Ce sont les fonctions `lignes_epaisses()` et `figure_3()`, qu'on peut dé-commenter dans la fonction `draw()`.
@@ -16,9 +18,13 @@ Mon propre algorithme est dans la fonction `grille_dessin()`. C'est une grille d
 
 ## Automate cellulaire
 
+![Bee of Life](screenshots/automate_cellulaire.png)
+
 Le travail est dans le dossier `cellular_automata`.
 
 ### Explications du jeu
+
+L'objectif est d'avoir un plateau de jeu type "jeu de la vie", où l'utilisateur est amené à tester plusieurs configurations, et se creuser la tête pour comprendre comment utiliser les outils pour arriver à tel ou tel résultat.
 
 C'est un jeu dans lequel on est dans un écosystème d'abeilles, on y retrouve plusieurs entités de base :
 
@@ -36,31 +42,26 @@ Pour les placer : clic sur une case ou clic maintenu et on déplace la souris su
 Voici les règles du système, appliquées à chaque génération :
 
 - Cases vides :
-
   - Si une entité mouvante (abeille, frelon ou reine) voisine a une direction qui correspond à la case courante, alors la case vide se transforme en cette entité, prend sa direction et sa durée de vie. Sauf si c'est le cas de plusieurs entités simultanément ou que l'entité est voisine d'une case sensée la tuer, auxquels cas la case reste vide
   - Si elle a pour voisins une abeille et une reine, et qu'aucun d'entre eux ne va dans sa direction, alors elle devient une larve d'abeille et prend la durée de vie correspondant aux larves
   - Si elle a pour voisins deux frelons, et qu'aucun d'entre eux ne va dans sa direction, alors elle devient une larve de frelon et prend la durée de vie correspondant aux larves, sauf si elle a aussi pour voisin une autre larve de frelon
 
 - Abeilles :
-
   - Se transforme en case vide si la case voisine correspondant à sa direction est vide, et qu'il n'y a pas une autre entité qui va y aller (en se basant sur la position des entités voisines à la case vide en question)
   - S'il y a quelqu'un sur la case voisine correspondant à sa direction, ou qu'il y a un conflit avec une autre entité (ce que j'ai expliqué au point précédent), alors la case reste une abeille et sa direction change aléatoirement. C'est aussi la cas si la case visée par la direction n'existe pas (l'abeille est au bord de la zone)
   - Si elle est voisine d'un frelon, elle meurt (devient une case vide)
   - Si un voisin est une ruche, alors elle se transforme en ruche
 
 - Frelons :
-
   - Mêmes premiers et deuxièmes points que les abeilles pour le déplacement
   - Si sa durée de vie est à 0, il meurt
   - Si sa durée de vie n'est pas à 0, elle est décrémentée
   - S'il est voisin d'une ruche, il meurt
 
 - Reines :
-
   - Mêmes premiers et deuxièmes points que les abeilles pour le déplacement
 
 - Larves :
-
   - Si sa durée de vie est à 0, elle devient l'entité correspondante (abeille ou frelon) avec une direction aléatoire. Si elle devient un frelon, elle prend la durée de vie de base d'un frelon
   - Si sa durée de vie n'est pas à 0, elle est décrémentée
 
@@ -106,6 +107,10 @@ Aide dans la recherche de bugs dans les tas de conditions : Copilot
 
 ## Fractales
 
+![Ponzi Simulator](screenshots/fractales.png)
+
+Ce projet, fait avec Laïn, est celui dont je suis le plus content de la semaine.
+
 Les infos sur les fractales sont dans le README du projet lui-même.
 
 Pour voir le projet original (avec les commits), allez sur [ce dépôt](https://github.com/CorentinAT/ponzi_simulator)
@@ -114,8 +119,16 @@ Mais pour résumer, le projet est visible [ici](https://ponzi.super-sympa.fr/)
 
 ## Littérature digitale
 
+![Roue de l'amour](screenshots/litterature_digitale.png)
+
 Le travail est dans le dossier `digital_litterature`.
 
 Quatre roues de la fortune tournent en même temps. Au clic (ou à l'appui sur Espace), une des roues s'arrête sur un mot. Après quatre clics, une phrase romantique est formée !
 
+J'aime bien l'idée qu'on découvre la phrase générée apparaisse petit à petit au rythme de l'utilisateur, ça créé un petite excitation et de la surprise.
+
 Les mots utilisés viennent de l'algorithme de Strachey, traduits en français.
+
+## Sujet libre
+
+Pour le sujet libre, on a continué le projet des fractales avec Laïn pour rendre le jeu plus intéressant, plus évolutif, plus long et plus compliqué pour avoir un pression constante tout au long de la partie et se sentir récompensé quand on franchit des étapes du jeu.
