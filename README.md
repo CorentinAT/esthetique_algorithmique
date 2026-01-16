@@ -132,3 +132,7 @@ Les mots utilisés viennent de l'algorithme de Strachey, traduits en français.
 ## Sujet libre
 
 Pour le sujet libre, on a continué le projet des fractales avec Laïn pour rendre le jeu plus intéressant, plus évolutif, plus long et plus compliqué pour avoir un pression constante tout au long de la partie et se sentir récompensé quand on franchit des étapes du jeu.
+
+Cette version du jeu est dans le dossier `free`.
+
+La partie `PATCH 1.2 (vendredi)` du README du projet détaille les ajouts par rapport au mercredi.
