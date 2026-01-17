@@ -267,7 +267,7 @@ function endGame(win) {
 
 // On met en ligne le score pour qu'il apparaîsse dans le tableau
 async function publishScore(e) {
-  e.prevenementDefault();
+  e.preventDefault();
   await fetch(API_URL + "score", {
     method: "POST",
     headers: {
